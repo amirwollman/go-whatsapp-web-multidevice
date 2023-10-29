@@ -307,7 +307,7 @@ func forwardToWebhook(evt *events.Message) error {
 		}
 	}
 
-	var waReaction *evtReaction
+	var waReaction evtReaction
 	if evt.Message.ReactionMessage != nil {
 		waReaction.Message = evt.Message.ReactionMessage.GetText()
 		waReaction.ID = evt.Message.ReactionMessage.GetKey().GetId()
